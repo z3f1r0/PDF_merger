@@ -1,20 +1,19 @@
-# fonde in un solo file tutti i pdf trovati nella cartella di lavoro
+# this script merges in one unique file all pdf files that there are in working directory
 from os import listdir
 import PyPDF2
 import os
 
-# elenco di files e cartelle dentro la cartella di lavoro
+# list of files and directory in the working directory
 listaFiles = listdir()
 
-
-# apriamo in scrittura il file pdf in cui fondere gli altri
+# open a pdf file for writing to merge in all others
 print("Come vuoi chiamare il tuo file PDF?\nRicordati di aggiungere l'estensione '.pdf'")
-nomeFileDestinazione = input() # diciamo come chiamare il file definitivo
+nomeFileDestinazione = input() # name of final pdf file
 PDF_Destinazione = open(nomeFileDestinazione, "wb")  # w=write, b=binary
-merger = PyPDF2.PdfFileMerger() # fa da cumulatore per un file pdf e, sotto nel ciclo for, aggiunge tutte le pagine di un file della lista
+merger = PyPDF2.PdfFileMerger() # this is a merger for all pdf files
 
 for nomeFile in listaFiles:
-    if nomeFile.endswith(".pdf"): #sceglie solo i file con estensione .pdf
+    if nomeFile.endswith(".pdf"): # choose only pdf file extension
         pdfFile = open(nomeFile, "rb")  # r=read, b=binary
         readerPDF = PyPDF2.PdfFileReader(pdfFile)
         merger.append(readerPDF)
