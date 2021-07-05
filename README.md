@@ -1,3 +1,4 @@
 # PDF_merger
-Lo script una volta lanciato prenderà tutti i file pdf della cartella in cui è stato eseguito e li unirà in un unico file pdf.
-Quando si esegue il programma bisogna inserire un nome per il nuovo file PDF che si creerà seguito dall'apposita estensione ossia ".pdf".
+When script is executed it will take all pdf files in the working directory where it had been executed and they will merge in a unique pdf file.
+Remember to indicate a name for new pdf file following by extension ".pdf".
+Good job!
