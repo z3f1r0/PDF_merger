@@ -7,7 +7,7 @@ import os
 listaFiles = listdir()
 
 # open a pdf file for writing to merge in all others
-print("Come vuoi chiamare il tuo file PDF?\nRicordati di aggiungere l'estensione '.pdf'")
+print("How do you want to call your PDF file?\nRemember to add the '.pdf' extension")
 nomeFileDestinazione = input() # name of final pdf file
 PDF_Destinazione = open(nomeFileDestinazione, "wb")  # w=write, b=binary
 merger = PyPDF2.PdfFileMerger() # this is a merger for all pdf files
