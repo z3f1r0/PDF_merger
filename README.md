@@ -6,4 +6,4 @@ Good job!
 ### Complete use of this script needs downloading of PyPDF2 library
 > pip install PyPDF2
 
-### by z3f1r0
+#### by z3f1r0
